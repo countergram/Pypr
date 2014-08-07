@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Pypr: Open Python 3 module",
+        "command": "open_module",
+    },
+    {
+        "caption": "Pypr: Open Python 2 module",
+        "command": "open_module_py2",
+    },
+]
