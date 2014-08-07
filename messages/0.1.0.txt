@@ -1,0 +1,16 @@
+Pypr 0.1.0
+
+Welcome! To open the source for a Python module, choose "Pypr: Open Python 3
+module" or "Pypr: Open Python 2 module" from the Command Palette.
+
+Pypr will prompt you for a package/module name and attempt to use the python3
+or python2 executable on your PATH to find an importable package by that name.
+
+A workaround for the OS X PATH issue (environment not being set if ST3 is not
+started with 'subl') is included.
+
+Pypr 0.1.0 is still in early development and is not tested cross-platform.
+
+If you have any problems please raise an issue at:
+
+https://github.com/countergram/Pypr
