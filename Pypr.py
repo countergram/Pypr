@@ -34,11 +34,13 @@ class open_module(sublime_plugin.WindowCommand):
             "Package name", "", self.input_done, None, None)
 
     def input_done(self, text):
+        text = text.splitlines()[0]
+        text = non_alphanum.sub('', text)
         try:
             module_path = find_module_path(text, self.py2)
             open_in_new_window(module_path)
         except subprocess.CalledProcessError:
-            sublime.status_message("Not found: {}".format(e))
+            sublime.status_message("Not found: {}".format(text))
 
 
 class open_module_py2(open_module):
@@ -47,8 +49,6 @@ class open_module_py2(open_module):
 
 def find_module_path(text, py2=False):
     " Try to find the filesystem location of a Python module. "
-    text = text.splitlines()[0]
-    text = non_alphanum.sub('', text)
     env = {"PATH": PATH} if PATH else None
     module_path = subprocess.check_output([
         "python2" if py2 else "python3",
