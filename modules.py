@@ -1,5 +1,5 @@
 import subprocess
-from .Pypr import env
+from .env import env
 
 
 find_module_path_script = r"""\

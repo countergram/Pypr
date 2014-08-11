@@ -2,7 +2,7 @@ import subprocess
 import sublime
 import sublime_plugin
 from .modules import get_module_list, find_module_path
-from .Pypr import env
+from .env import env
 
 
 class open_module(sublime_plugin.WindowCommand):
